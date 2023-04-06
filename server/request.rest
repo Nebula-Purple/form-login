@@ -1,0 +1,108 @@
+# Create a User
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Anton Luron",
+    "email": "anton@gmail.com",
+    "password": "55555",
+    "confPassword": "55555",
+    "role": "User"
+}
+
+
+# Get All User
+###
+GET http://localhost:5000/users
+
+
+# Get Single User
+###
+GET http://localhost:5000/users/4a61920e-a2ec-4682-9968-5d2649b3f65c
+
+
+# Update a User
+###
+PATCH http://localhost:5000/users/188ed630-f427-4fb9-8903-1a7aef4d57a4
+Content-Type: application/json
+
+{
+    "name": "Antonius Gila",
+    "email": "gila@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+
+# Delete a User
+###
+DELETE http://localhost:5000/users/0e33e98f-e17f-49cb-8979-86cbf97eb344
+
+
+# Login User
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "anton@gmail.com",
+    "password": "55555"
+}
+
+
+# Login Admin
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "johanes@gmail.com",
+    "password": "55555"
+}
+
+###
+GET http://localhost:5000/me
+
+
+
+###
+DELETE http://localhost:5000/logout
+
+
+
+# Get All Product
+###
+GET http://localhost:5000/products
+
+
+# Get single product
+###
+GET http://localhost:5000/products/09c182da-e51d-4193-9792-707682e9fb35
+
+
+# Post Data Product
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 3",
+    "price": 4546
+}
+
+
+# Data update Product
+###
+PATCH http://localhost:5000/products/09c182da-e51d-4193-9792-707682e9fb35
+Content-Type: application/json
+
+{
+    "name": "Product Update",
+    "price": "874"
+}
+
+
+# Hapus Product
+###
+DELETE http://localhost:5000/products/8859aa4d-5285-4a21-9d30-8debdbf76ab1
